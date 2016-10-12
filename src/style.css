@@ -1,0 +1,50 @@
+@font-face{
+    font-family: "Lucida-Blackletter";
+    src: url('../assets/fonts/lucida_blackletter.ttf') format("truetype");
+}
+
+@font-face{
+    font-family: "Imprint-MT-Shadow";
+    src: url('../assets/fonts/imprint_mt_shadow.ttf') format("truetype");
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html, body, #map {
+	height: 100%;
+	width: 100%;
+}
+
+h1 {
+    font-family: "Lucida-Blackletter";
+    border-bottom: 3px solid black;
+}
+
+p {
+    font-family: "Imprint-MT-Shadow";
+    font-size: 15px;
+}
+
+img {
+    height: 280px;
+    width: 280px;
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    background-color: #e0c7a1;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+    color: black;
+}
+
+.quote {
+    display: block;
+    text-align: center;
+    font-family: "Imprint-MT-Shadow";
+    font-style: italic;
+}

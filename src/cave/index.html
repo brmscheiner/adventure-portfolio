@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.css" rel='stylesheet' type='text/css'></script>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:100' rel='stylesheet' type='text/css'>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/p5.js"></script>
+    <script language="javascript" type="text/javascript" src="js/mas.js"></script>
+    <title>Ben Scheiner</title>
+  </head>
+
+  <body>
+    <div id="modal-background" class="hidden"> </div>
+    <div id="modal" class="hidden">
+      <div id="modal-leftpane">
+        <p>Freelance inquiries</p>
+        <p>Anything else</p>
+      </div>
+      <div id="modal-rightpane">
+        <p>freelance.brmscheiner@gmail.com</p>
+        <p>brmscheiner@gmail.com</p>
+      </div>
+    </div>
+    <div id="canvasContainer">
+        <div id="all">
+          <div id="social">
+            <a href="https://github.com/brmscheiner"><img src="img/github-icon.png" height=50px></a>
+            <a id="contact-info" href="#"><img src="img/email-icon.png" height=50px></a>
+          </div>
+        </div>
+    </div>
+
+    <script>
+      "use strict"
+      $(".show_div").click(function () {
+        var id = this.id;
+        $(".showing").fadeOut(function () {
+            $(".showing").removeClass("showing");
+            $("."+id+"_container").addClass("showing");
+            $("."+id+"_container").fadeIn();
+        });
+      })
+      
+      $("#contact-info").click(function () {
+        $("#modal").fadeIn('slow')
+        $("#modal-background").fadeIn('slow')
+        $('body').addClass('no-scroll')
+      });
+      
+      $("#modal-background").click(function () {
+        $("#modal").fadeOut('slow')
+        $("#modal-background").fadeOut('slow')
+        $('body').removeClass('no-scroll')
+      });
+
+    </script>
+  </body>
+</html>
