@@ -87,6 +87,47 @@
                 "type": "Point",
                 "coordinates": [41.2152099609375, 8.018435736309621]
             }
+        },{
+            "type": "Feature",
+            "properties": {
+                "name": "Tree",
+                "icon": "oaktree.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [41.01753173828125, 5.550786211171341]
+            }
+        },{
+            "type": "Feature",
+            "properties": {
+                "name": "Tree",
+                "icon": "oaktree.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [41.87988281249999, 6.702798381193026]
+            }
+        },{
+            "type": "Feature",
+            "properties": {
+                "name": "Tree",
+                "icon": "oaktree.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [41.88812255859375, 6.386271437817992]
+            }
+        },{
+            "type": "Feature",
+            "properties": {
+                "name": "House",
+                "icon": "house.png",
+                "template": "myhouse.tmpl.html"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [42.066650390625, 6.530916379570459]
+            }
         }
 
     ]

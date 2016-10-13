@@ -27,17 +27,20 @@ promise.then(function(data) {
       );
     },
     onEachFeature: function(feature, layer) {
-      var popupOptions = {
-        maxHeight: 500,
-        offset: L.point(0, -30)
-      };
-      $.get('templates/' + feature.properties.template, function(tmpl) {
-        if (feature.properties.default) {
-          layer.bindPopup(tmpl, popupOptions).openPopup();
-        } else {
-          layer.bindPopup(tmpl, popupOptions);
-        }
-      });
+
+      if (feature.properties.template) {
+        var popupOptions = {
+          maxHeight: 500,
+          offset: L.point(0, -30)
+        };
+        $.get('templates/' + feature.properties.template, function(tmpl) {
+          if (feature.properties.default) {
+            layer.bindPopup(tmpl, popupOptions).openPopup();
+          } else {
+            layer.bindPopup(tmpl, popupOptions);
+          }
+        });
+      }
     }
   });
   items.addTo(map);
