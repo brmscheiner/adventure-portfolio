@@ -5,8 +5,8 @@ function loadSong() {
     preload: true
   });
   song.bind('canplaythrough', function() {
-    console.log('here')
-    this.play();
+    console.log('Playing song');
+    this.play().loop();
   });
 }
 
@@ -50,14 +50,21 @@ var map = L.map('map')
 .addLayer(mapboxTiles)
 .setView([6.550786211171341, 41.01753173828125], 9)
 .on('click', function(e) {
-  console.log(map.getZoom());
   console.log(e.latlng.lng + ', ' + e.latlng.lat);
 });
 
 var promise = $.getJSON("items.json");
 promise.then(function(data) {
   addMapFeatures(data);
-  loadSong();
+  // loadSong();
 });
 
-
+$( '#sound-button' ).on('click', function(e, f, g) {
+  let sound_src = 'assets/sound.png';
+  let mute_src = 'assets/mute.png';
+  if ($( '#sound-button' ).attr('src') === sound_src) {
+    $( '#sound-button' ).attr('src', mute_src);
+  } else {
+    $( '#sound-button' ).attr('src', sound_src);
+  }
+});

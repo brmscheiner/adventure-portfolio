@@ -48,3 +48,11 @@ img {
     font-family: "Imprint-MT-Shadow";
     font-style: italic;
 }
+
+#sound-button {
+    position: fixed;
+    left: 10px;
+    height: 40px;
+    width: 50px;
+    bottom: 10px;
+}
