@@ -22,7 +22,7 @@ var sketch_p5 = new p5(function(sketch) {
         var myCanvas = sketch.createCanvas(sketch.windowWidth, sketch.windowHeight);
         oldWindowWidth = sketch.windowWidth;
         oldWindowHeight = sketch.windowHeight;
-        var canvasContainer = document.getElementById("canvasContainer");
+        var canvasContainer = document.getElementById("canvas-container");
         myCanvas.parent(canvasContainer);
         sketch.colorMode(sketch.RGB);
         sketch.rectMode(sketch.CENTER);
@@ -221,20 +221,6 @@ var sketch_p5 = new p5(function(sketch) {
         spawnPoints.forEach(sketch.operateSpawnPoint)
         sketch.breedAgents();
         sketch.killAgents();
-        
-        if (clock < 100) {
-            var transparency = 2000/clock;
-            sketch.fill(153, 0, 0, transparency);
-            sketch.stroke(255, 255, 153, transparency);
-            sketch.strokeWeight(3);
-            sketch.text("SCHEINER BOCK", sketch.width/2, sketch.height/2);
-        } else if (clock < 105) {
-            var transparency = 2000/clock - (2000/clock)*(clock - 100)/5;
-            sketch.fill(153, 0, 0, transparency);
-            sketch.stroke(255, 255, 153, transparency);
-            sketch.strokeWeight(3);
-            sketch.text("SCHEINER BOCK", sketch.width/2, sketch.height/2);
-        }
             
         clock += 1;
     }
