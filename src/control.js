@@ -1,14 +1,34 @@
+var firstPlay = true;
 
 function loadSong() {
-  var song = new buzz.sound("assets/sound/suonatore_di_liuto", {
+  let song = new buzz.sound("assets/sound/suonatore_di_liuto", {
     formats: ['mp3'],
     preload: true
   });
   song.bind('canplaythrough', function() {
-    console.log('Playing song');
-    this.play().loop();
+    if (firstPlay) {
+      this.play();
+    }
+    firstPlay = false;
+  });
+  setSoundButtonHandler(song);
+}
+
+function setSoundButtonHandler(song) {
+  $( '#sound-button' ).on('click', function(e, f, g) {
+    let sound_src = 'assets/sound.png';
+    let mute_src = 'assets/mute.png';
+    if ($( '#sound-button' ).attr('src') === sound_src) {
+      $( '#sound-button' ).attr('src', mute_src);
+      song.stop();
+    } else {
+      $( '#sound-button' ).attr('src', sound_src);
+      song.play();
+      song.loop();
+    }
   });
 }
+
 
 function addMapFeatures(data) {
   var items = L.geoJson(data, {
@@ -56,15 +76,5 @@ var map = L.map('map')
 var promise = $.getJSON("items.json");
 promise.then(function(data) {
   addMapFeatures(data);
-  // loadSong();
-});
-
-$( '#sound-button' ).on('click', function(e, f, g) {
-  let sound_src = 'assets/sound.png';
-  let mute_src = 'assets/mute.png';
-  if ($( '#sound-button' ).attr('src') === sound_src) {
-    $( '#sound-button' ).attr('src', mute_src);
-  } else {
-    $( '#sound-button' ).attr('src', sound_src);
-  }
+  loadSong();
 });
