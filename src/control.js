@@ -73,8 +73,12 @@ var map = L.map('map')
   console.log(e.latlng.lng + ', ' + e.latlng.lat);
 });
 
-var promise = $.getJSON("items.json");
-promise.then(function(data) {
-  addMapFeatures(data);
-  loadSong();
+var items_promise = $.getJSON("items.json");
+items_promise.then(function(items_data) {
+  addMapFeatures(items_data);
+  var custom_items_promise = $.getJSON("custom_items.json");
+  custom_items_promise.then(function(custom_items_data) {
+    addMapFeatures(custom_items_data);
+    loadSong();
+  });
 });
