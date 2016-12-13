@@ -65,7 +65,14 @@ function addMapFeatures(data) {
 var mapboxTiles = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/satellite-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYnJtc2NoZWluZXIiLCJhIjoiMEJvZTZsTSJ9.iB00l7bUVL9WUxx7YwhOdA', {
   attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
 });
-var map = L.map('map')
+var disableZoomParameters = {
+  zoomControl: false,
+  touchZoom: false,
+  scrollWheelZoom: false,
+  doubleClickZoom: false,
+  boxZoom: false
+}
+var map = L.map('map', disableZoomParameters)
 .addLayer(mapboxTiles)
 .setView([6.550786211171341, 41.01753173828125], 9)
 .on('click', function(e) {
