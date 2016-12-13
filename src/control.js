@@ -44,7 +44,6 @@ function addMapFeatures(data) {
       );
     },
     onEachFeature: function(feature, layer) {
-
       if (feature.properties.template) {
         var popupOptions = {
           maxHeight: 500,

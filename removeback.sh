@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # pass the image path, image name and threshold(used as a fuzz factor) to the bash script
+# sample usage: ./removeback.sh scroll/ scroll.jpg where image path is scroll/scroll.jpg
 IMGPATH=$1
 IMGNAME=$2
 THRESHOLD=$3

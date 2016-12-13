@@ -19,43 +19,43 @@
             "type": "Feature",
             "properties": {
                 "name": "Github",
-                "icon": "recurse.png",
+                "icon": "yaktocat.png",
                 "template": "github.tmpl.html"
 
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [40.66864013671875, 6.489983332670651]
+                "coordinates": [40.72357177734375, 5.7690358661221355]
             }
         },{
             "type": "Feature",
             "properties": {
                 "name": "Mainframe",
-                "icon": "hand.png",
+                "icon": "defrag.png",
                 "template": "glitch.tmpl.html"
 
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [40.43243408203125, 7.0027636819827475]
+                "coordinates": [39.1827392578125, 7.784472396665788]
             }
         },{
             "type": "Feature",
             "properties": {
                 "name": "Resume",
-                "icon": "hand.png",
+                "icon": "scroll.png",
                 "template": "resume.tmpl.html"
 
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [40.24017333984375, 6.506356951818043]
+                "coordinates": [40.023193359375, 6.852804622932613]
             }
         },{
             "type": "Feature",
             "properties": {
                 "name": "Carevoyance",
-                "icon": "hand.png",
+                "icon": "cauldron.gif",
                 "template": "carevoyance.tmpl.html"
 
             },
@@ -67,19 +67,19 @@
             "type": "Feature",
             "properties": {
                 "name": "Mandalas",
-                "icon": "hand.png",
+                "icon": "temple.png",
                 "template": "mandalas.tmpl.html"
 
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [41.53656005859375, 5.610518995900887]
+                "coordinates": [41.63818359374999, 5.3425828520359735]
             }
         },{
             "type": "Feature",
             "properties": {
                 "name": "Cave",
-                "icon": "hand.png",
+                "icon": "cave.png",
                 "template": "cave.tmpl.html"
 
             },
