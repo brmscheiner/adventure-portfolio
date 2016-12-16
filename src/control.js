@@ -34,11 +34,12 @@ function addMapFeatures(data) {
   var items = L.geoJson(data, {
     pointToLayer: function(feature, latlng) {
       let icon_path = 'assets/icons/' + feature.properties.icon;
+      let icon_size = feature.properties.size ? feature.properties.size : 64;
       return L.marker(latlng,
         {
           icon: L.icon({
             iconUrl: icon_path,
-            iconSize: new L.Point(64, 64)
+            iconSize: new L.Point(icon_size, icon_size)
           })
         }
       );
@@ -71,8 +72,9 @@ var disableZoomParameters = {
   scrollWheelZoom: false,
   doubleClickZoom: false,
   boxZoom: false
-}
-var map = L.map('map', disableZoomParameters)
+};
+// var map = L.map('map', disableZoomParameters)
+var map = L.map('map')
 .addLayer(mapboxTiles)
 .setView([6.550786211171341, 41.01753173828125], 9)
 .on('click', function(e) {

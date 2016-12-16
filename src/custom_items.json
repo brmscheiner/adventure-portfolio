@@ -20,7 +20,8 @@
             "properties": {
                 "name": "Github",
                 "icon": "yaktocat.png",
-                "template": "github.tmpl.html"
+                "template": "github.tmpl.html",
+                "size": 84
 
             },
             "geometry": {
@@ -68,8 +69,8 @@
             "properties": {
                 "name": "Mandalas",
                 "icon": "temple.png",
-                "template": "mandalas.tmpl.html"
-
+                "template": "mandalas.tmpl.html",
+                "size": 144
             },
             "geometry": {
                 "type": "Point",
